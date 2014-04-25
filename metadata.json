@@ -1,0 +1,29 @@
+{
+  "name": "martezr-windows_disable_ipv6",
+  "version": "0.1.0",
+  "summary": "",
+  "author": "",
+  "description": "",
+  "dependencies": [
+    {
+      "name": "puppetlabs/registry",
+      "version_requirement": "\u003e\u003d0.1.1"
+    },
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "\u003e\u003d4.1.0"
+    },
+    {
+      "name": "puppetlabs/reboot",
+      "version_requirement": "\u003e\u003d0.1.5"
+    },
+    {
+      "name": "puppetlabs/reboot"
+    }
+  ],
+  "types": [],
+  "checksums": {},
+  "source": "",
+  "project_page": "",
+  "license": ""
+}
