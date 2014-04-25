@@ -1,29 +1,26 @@
 {
   "name": "martezr-windows_disable_ipv6",
   "version": "0.1.0",
-  "summary": "",
-  "author": "",
-  "description": "",
+  "summary": "This module disables/enables IPv6 on Windows platforms",
+  "author": "Martez Reed",
+  "description": "This module disables/enables IPv6 on Windows platforms",
   "dependencies": [
     {
       "name": "puppetlabs/registry",
-      "version_requirement": "\u003e\u003d0.1.1"
+      "version_requirement": ""
     },
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": "\u003e\u003d4.1.0"
+      "version_requirement": ""
     },
     {
       "name": "puppetlabs/reboot",
-      "version_requirement": "\u003e\u003d0.1.5"
-    },
-    {
-      "name": "puppetlabs/reboot"
+      "version_requirement": ""
     }
   ],
   "types": [],
   "checksums": {},
   "source": "",
-  "project_page": "",
-  "license": ""
+  "project_page": "https://github.com/martezr/puppet-windows_disable_ipv6",
+  "license": "Apache License, Version 2.0"
 }
