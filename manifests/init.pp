@@ -23,10 +23,12 @@
 class windows_disable_ipv6 (
   # ipv6 enabled by default
   $ipv6_disable = false,
+  $ipv6_reboot  = true,
 ) {
 
 # Validate ipv6 class 
 validate_bool($ipv6_disable)
+validate_bool(ipv6_reboot)
 
 # IPv6 logic (IPv6 enabled = 0, IPv6 disabled = 1)
 if $ipv6_disable {
@@ -42,8 +44,15 @@ registry::value { 'ipv6':
   data  => $ipv6_setting,
 }
 
+if $ipv6_reboot {
 reboot { 'after':
-  subscribe => Class['ipv6'],
-}
-
+ subscribe => registry::value['ipv6'],
+ }
+ }
+ else{
+notify {'ipv6rebootmessage':
+name    => 'ipv6 reboot message',
+message => 'The ipv6 settings will be applied after the next system restart',
+} 
+  }
 }
