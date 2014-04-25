@@ -44,12 +44,14 @@ Example - Disable IPv6
 <pre>
   class {'windows_disable_ipv6':
    ipv6_disable => true,
+   ipv6_reboot  => true,
    }
 </pre>
 
 <pre>
 Parameters:
-  $ipv6_disable  # disable ipv6 {true|false}
+  $ipv6_disable  # disable ipv6   {true|false}
+  $ipv6_reboot	 # system restart {true|false}
 </pre>
 
 ##Reference
