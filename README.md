@@ -1,67 +1,38 @@
-# windows_disable_ipv6 #
+# puppet-windows_disable_ipv6
 
-####Table of Contents
+Puppet module to disable ipv6 on Windows platforms
 
-1. [Overview](#overview)
-2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with windows_disable_ipv6](#setup)
-    * [What windows_disable_ipv6 affects](#what-[modulename]-affects)
-    * [Setup requirements](#setup-requirements)
-    * [Beginning with windows_disable_ipv6](#beginning-with-[Modulename])
-4. [Usage - Configuration options and additional functionality](#usage)
-5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
+===
 
-##Overview
+# Compatability
 
-Disable IPv6 on Windows
+This module has been tested to work on the following systems with Puppet v3 and Ruby versions 1.8.7, 1.9.3 and 2.0.0.
 
-##Module Description
+ * Windows Server 2008 R2
+ * Windows Server 2012 R2
 
-This module is used to disable IPv6 on Windows platforms through a registry change.
+===
 
-##Setup
+# Parameters
 
-###What windows_disable_ipv6 affects
+ipv6_disable
+-----------
+Disable ipv6.
 
-The module modifies the "Disabled Components" registry key to disable or enable IPv6 on the node. A system restart is required for the change to take effect.
+- *Default*: false
 
-###Setup Requirements
- 
-Depends on the following modules:
+ipv6_reboot
+---------------------------
+Reboot the machine after the ipv6_disable setting has been changed in order for the setting to take effect.
 
-puppetlabs/registry
-puppetlabs/stdlib
-puppetlabs/reboot
+- *Default*: false
 
-##Usage
+===
 
-Class: windows_disable_ipv6
-
-Example - Disable IPv6
+## Sample usage:
+Disable ipv6 through Hiera.
 
 <pre>
-  class {'windows_disable_ipv6':
-   ipv6_disable => true,
-   ipv6_reboot  => true,
-   }
+windows_disable_ipv6::ipv6_disable: true
+windows_disable_ipv6::ipv6_reboot: true
 </pre>
-
-<pre>
-Parameters:
-  $ipv6_disable  # disable ipv6   {true|false}
-  $ipv6_reboot	 # system restart {true|false}
-</pre>
-
-##Reference
-
-##Limitations
-
-##Development
-
-##Release Notes/Contributors/Etc
-
-Contributors:
-
-Martez Reed <martez.reed@greenreedtech.com>
