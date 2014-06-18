@@ -20,7 +20,7 @@
   ],
   "types": [],
   "checksums": {},
-  "source": "",
+  "source": "https://github.com/martezr/puppet-windows_disable_ipv6.git",
   "project_page": "https://github.com/martezr/puppet-windows_disable_ipv6",
   "license": "Apache License, Version 2.0"
 }
