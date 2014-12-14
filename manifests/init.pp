@@ -50,7 +50,7 @@ registry::value { 'ipv6':
 if $ipv6_reboot {
 # Monitor for changes to ipv6 registry to determine whether a system restart is required
 reboot { 'after':
-  subscribe => registry::value['ipv6'],
+  subscribe => Registry::Value['ipv6'],
   }
   }
   else{
