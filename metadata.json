@@ -1,26 +1,39 @@
 {
-  "name": "martezr-windows_disable_ipv6",
-  "version": "0.1.0",
-  "summary": "This module disables/enables IPv6 on Windows platforms",
-  "author": "Martez Reed",
-  "description": "This module disables/enables IPv6 on Windows platforms",
-  "dependencies": [
-    {
-      "name": "puppetlabs/registry",
-      "version_requirement": ""
-    },
-    {
-      "name": "puppetlabs/stdlib",
-      "version_requirement": ""
-    },
-    {
-      "name": "puppetlabs/reboot",
-      "version_requirement": ""
+      "name": "martezr-windows_disable_ipv6",
+      "version": "0.1.1",
+      "author": "Martez Reed",
+      "license": "Apache-2.0",
+      "summary":     "This puppet module disables/enables IPv6 on Windows platforms",
+      "source": "https://github.com/martezr/puppet-windows_disable_ipv6",
+      "project_page": "https://github.com/martezr/puppet-windows_disable_ipv6",
+      "issues_url": "https://github.com/martezr/puppet-windows_disable_ipv6/issues",
+      "tags": ["ipv6"],
+      "operatingsystem_support": [
+       {
+         "operatingsystem": "windows",
+         "operatingsystemrelease": [
+          "Server 2008",
+          "Server 2008 R2", 
+          "Server 2012", 
+          "Server 2012 R2", 
+          "7",
+          "8"
+         ]
+        }
+      ], 
+      "requirements": [
+        {
+          "name": "pe",
+          "version_requirement": ">= 3.3.0 < 2015.3.0"
+        },
+        {
+          "name": "puppet",
+          "version_requirement": ">= 3.0.0 < 5.0.0"
+        }
+      ],
+      "dependencies": [
+        { "name": "puppetlabs/registry", "version_requirement": ">= 0.1.0 <5.0.0" },
+        { "name": "puppetlabs/stdlib", "version_requirement": ">= 0.1.0 <5.0.0" },
+        { "name": "puppetlabs/reboot", "version_requirement": ">= 0.1.0 <5.0.0" },
+      ]
     }
-  ],
-  "types": [],
-  "checksums": {},
-  "source": "https://github.com/martezr/puppet-windows_disable_ipv6.git",
-  "project_page": "https://github.com/martezr/puppet-windows_disable_ipv6",
-  "license": "Apache License, Version 2.0"
-}

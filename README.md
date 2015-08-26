@@ -1,5 +1,7 @@
 # puppet-windows_disable_ipv6
 
+[![Build Status](https://travis-ci.org/martezr/puppet-windows_disable_ipv6.svg?branch=master)](https://travis-ci.org/martezr/puppet-windows_disable_ipv6)
+
 Puppet module to disable ipv6 on Windows platforms
 
 ===
@@ -8,7 +10,9 @@ Puppet module to disable ipv6 on Windows platforms
 
 This module has been tested to work on the following systems with Puppet v3 and Ruby versions 1.8.7, 1.9.3 and 2.0.0.
 
+ * Windows Server 2008 
  * Windows Server 2008 R2
+ * Windows Server 2012
  * Windows Server 2012 R2
 
 ===

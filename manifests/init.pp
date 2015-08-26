@@ -1,3 +1,5 @@
+# init.pp
+#
 # Class: windows_disable_ipv6
 #
 #  This class is used to enable/disable IPv6 on Windows platforms
