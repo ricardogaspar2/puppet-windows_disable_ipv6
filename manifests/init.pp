@@ -36,7 +36,7 @@ validate_bool($ipv6_reboot)
 
 # IPv6 logic (IPv6 enabled = 0, IPv6 disabled = 1)
 if $ipv6_disable {
-  $ipv6_setting = '0xFFFFFFFF'
+  $ipv6_setting = '0xFF' 
 }else{
   $ipv6_setting = '0x0'
 }
